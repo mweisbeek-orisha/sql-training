@@ -137,4 +137,4 @@ Msg 245, Level 16, State 1, Line 1
 Conversion failed when converting the varchar value 'Martijn Weisbeek' to data type int.
 ```
 
-Volgende stap: [gegevens groeperen](6-group-by.md)
+Volgende stap: [gegevens koppelen (JOIN)](joins.md)
