@@ -35,8 +35,29 @@ ORDER BY o.OrderDate DESC
 This will give you the name of the customer, the date the order has been placed and the total order revenue.
 All of these orders are listed with the latest order on top (hence the keyword DESC, short for descending).
 
+You can join as much tables together as you like. In this example also a table OrderLines is added, giving you even more detail about what specific products the customer ordered:
+```sql
+SELECT c.Name, o.OrderDate, o.OrderTotal
+, ol.ItemCode, ol.Description, ol.Quantity
+FROM Customers c
+INNER JOIN Orders o ON o.CustomerId = c.Id
+INNER JOIN OrderLines ol on ol.OrderId = o.Id
+ORDER BY o.OrderDate DESC
+```
+
+You can also use aliases for the names of the columns:
+```sql
+SELECT c.Name as CustomerName, o.OrderDate as [Date of the order], o.OrderTotal as [Total amount]
+, ol.ItemCode, ol.Description, ol.Quantity as [OrderedQty]
+FROM Customers c
+INNER JOIN Orders o ON o.CustomerId = c.Id
+INNER JOIN OrderLines ol on ol.OrderId = o.Id
+ORDER BY o.OrderDate DESC
+```
+When you do not specify an alias for a column, SQL Server will just use the name of the column as-is. When data comes from an agregate function, no column name is known, so SQL Server will just put (No column name) above the column. So then it is wise to think of a good name and add an alias to the column.
+
 ### Optional data: LEFT JOIN
-But sometimes the data does not need to be available in the other table. Then you can use LEFT JOIN (that is actually a LEFT OUTER JOIN).
+Sometimes the data does not need to be available in the other table. Then you can use LEFT JOIN (that is actually a LEFT OUTER JOIN).
 
 ```sql
 SELECT * 
