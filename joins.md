@@ -49,3 +49,5 @@ But when a customer did not place an order you will see the customer's data, but
 
 ## INNER JOIN, LEFT (OUTER) JOIN, RIGHT (OUTER) JOIN, FULL (OUTER) JOIN, CROSS JOIN, SELF JOIN
 I know there are also other variants like RIGHT (OUTER) JOIN, et cetera. But using the 2 variants from this article I can tackle most table joins. So to make things easy, those are what I use.
+
+Next step: [group data](6-group-by.md)
