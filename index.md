@@ -11,6 +11,7 @@ Deze SQL cursus heeft de volgende inhoud:
 - [Foreign Keys](foreign-keys.md)
 - [Create, Read, Update, Delete](crud.md): CRUD
     - [Gegevens zoeken / selecteren](5-gegevens-selecteren.md): SELECT
+        - [Gegevens koppelen](joins.md): INNER JOIN, LEFT JOIN
         - [Gegevens groeperen](6-group-by.md): GROUP BY
         - [Werken met Functies](functions.md): MIN(), MAX(), COUNT(), SUM(), etc
     - [Gegevens toevoegen](4-gegevens-toevoegen.md): meerdere manieren
